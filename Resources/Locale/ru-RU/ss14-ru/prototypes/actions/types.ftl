@@ -55,10 +55,12 @@ ent-ActionSpafFood = [color=lightseagreen]Таинственные знания[
 ent-ActionSpafGlue = [color=darkslateblue]Липкая слизь[/color]
     .desc = Потратьте 10 единиц еды, чтобы выделить липкую слизь
 ent-ActionSpafEgg = [color=orange]Новая жизнь[/color]
-    .desc = Потратьте 50 единиц еды, чтобы создать яйцо с маленькой копией себя
+    .desc = Потратьте 75 единиц еды, чтобы создать яйцо с маленькой копией себя
 ent-ActionSpafEvolf = [color=green]Эволюция[/color]
     .desc = Эволюционируйте в маленького и милого детёныша S.P.A.F.
 ent-ActionSpafEvols = [color=blue]Эволюция[/color]
-    .desc = Потратьте 70 единиц еды, чтобы эволюционировать во взрослую особь
+    .desc = Потратьте 50 единиц еды, чтобы эволюционировать во взрослую особь
 ent-ActionSpafDevour = [color=lime]Поглощение[/color]
     .desc = Съешьте свою жертву, чтобы насытиться
+ent-ActionSpafHeal = [color=lime]Лечебный комочек[/color]
+    .desc = Потратьте 10 единиц еды, чтобы создать комок лечебной слизи, которым также могут воспользоваться ваши собратья

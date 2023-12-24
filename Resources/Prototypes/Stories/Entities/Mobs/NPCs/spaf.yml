@@ -53,6 +53,7 @@
 - type: entity
   parent:
     - SimpleSpaceMobBaseSpaf
+    - MobBloodstream
   id: SimpleMobBaseSpaf # for air breathers
   abstract: true
   components:
@@ -72,6 +73,9 @@
         Parched: 50
         Dead: 0
       baseDecayRate: 0.04
+    - type: Bloodstream
+      bloodReagent: Slime
+      bloodMaxVolume: 150
     - type: StatusEffects
       allowed:
         - Stun
@@ -96,7 +100,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      300: Dead
+      100: Dead
     stateAlertDict:
       Alive: SpafHealth
     showOverlays: false
@@ -104,10 +108,8 @@
     states:
       Alive:
         Base: spaf
-      Dead:
-        Base: dead
   - type: Stamina
-    critThreshold: 300
+    critThreshold: 100
   - type: SlowOnDamage
     speedModifierThresholds:
       40: 1.1
@@ -127,6 +129,9 @@
           - SmallMobMask
         layer:
           - SmallMobLayer
+  - type: Bloodstream
+    bloodReagent: Slime
+    bloodMaxVolume: 100
   - type: StatusEffects
     allowed:
       - Stun
@@ -165,6 +170,8 @@
     hungerPerSpafGlue: 10
   - type: SpafEgg
     hungerPerSpafEgg: 50
+  - type: SpafHeal
+    hungerPerSpafHeal: 10
   - type: SpafMine
     hungerPerSpafMine: 20
   - type: SpafStealth
@@ -172,13 +179,13 @@
   - type: SpafFood
     hungerPerSpafFood: 0
   - type: MeleeWeapon
-    altDisarm: false
+    altDisarm: true
     soundHit:
       path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
     damage:
       types:
-        Piercing: 15
-        Slash: 15
+        Piercing: 10
+        Slash: 10
   - type: RandomMetadata
     nameSegments:
     - SpafFirst
@@ -189,7 +196,7 @@
     thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 300
+          damage: 100
         behaviors:
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
@@ -216,7 +223,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        300: Dead
+        100: Dead
       stateAlertDict:
         Alive: SpafHealth
       showOverlays: false
@@ -227,7 +234,7 @@
         Dead:
           Base: dead
     - type: Stamina
-      critThreshold: 300
+      critThreshold: 100
     - type: SlowOnDamage
       speedModifierThresholds:
         40: 1.1
@@ -251,7 +258,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 300
+            damage: 100
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
@@ -259,6 +266,9 @@
       allowed:
         - Stun
         - StaminaModifier
+    - type: Bloodstream
+      bloodReagent: Slime
+      bloodMaxVolume: 100
     - type: PointLight
       color: DarkGreen
       radius: 0
@@ -286,7 +296,7 @@
     - type: SpafGlue
       hungerPerSpafGlue: 10
     - type: SpafEgg
-      hungerPerSpafEgg: 50
+      hungerPerSpafEgg: 75
     - type: SpafMine
       hungerPerSpafMine: 20
     - type: SpafStealth
@@ -294,13 +304,13 @@
     - type: SpafFood
       hungerPerSpafFood: 0
     - type: MeleeWeapon
-      altDisarm: false
+      altDisarm: true
       soundHit:
         path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
       damage:
         types:
-          Piercing: 15
-          Slash: 15
+          Piercing: 10
+          Slash: 10
     - type: RandomMetadata
       nameSegments:
         - SpafFirst
@@ -341,6 +351,9 @@
           Base: dead
     - type: Stamina
       critThreshold: 10
+    - type: Bloodstream
+      bloodReagent: Slime
+      bloodMaxVolume: 150
     - type: MovementSpeedModifier
       baseWalkSpeed: 0
       baseSprintSpeed: 0
@@ -414,10 +427,13 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        100: Dead
+        50: Dead
       stateAlertDict:
         Alive: SpafHealth
       showOverlays: false
+    - type: Bloodstream
+      bloodReagent: Slime
+      bloodMaxVolume: 50
     - type: DamageStateVisuals
       states:
         Alive:
@@ -425,7 +441,7 @@
         Dead:
           Base: dead
     - type: Stamina
-      critThreshold: 100
+      critThreshold: 50
     - type: SlowOnDamage
       speedModifierThresholds:
         40: 1.1
@@ -468,9 +484,9 @@
     - type: SpafFood
       hungerPerSpafFood: 0
     - type: SpafEvols
-      hungerPerSpafEvols: 70
+      hungerPerSpafEvols: 50
     - type: MeleeWeapon
-      altDisarm: false
+      altDisarm: true
       soundHit:
         path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
       damage:
@@ -501,10 +517,13 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        300: Dead
+        25: Dead
       stateAlertDict:
         Alive: SpafHealth
       showOverlays: false
+    - type: Bloodstream
+      bloodReagent: Blood
+      bloodMaxVolume: 25
     - type: Speech
       speechSounds: Squeak
       speechVerb: SmallMob
@@ -515,7 +534,7 @@
         Dead:
           Base: dead
     - type: Stamina
-      critThreshold: 300
+      critThreshold: 25
     - type: SlowOnDamage
       speedModifierThresholds:
         40: 1.1
@@ -537,7 +556,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 300
+            damage: 25
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
@@ -572,3 +591,28 @@
     - type: Tag
       tags:
         - CannotSuicide
+
+- type: entity
+  name: spafball
+  parent: FoodMeatBase
+  id: FoodMeatSpaf
+  description: A gelatinous shaping of slime jelly.
+  components:
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+            - ReagentId: Slime
+              Quantity: 9
+            - ReagentId: Omnizine
+              Quantity: 11
+    - type: FlavorProfile
+      flavors:
+        - slimy
+    - type: Tag
+      tags:
+        - Raw
+        - Meat
+    - type: Sprite
+      state: slime

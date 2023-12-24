@@ -35,6 +35,9 @@
             "name": "spaf_evol"
         },
         {
+            "name": "spaf_heal"
+        },
+        {
             "name": "spaf_devour_on"
         }
     ]

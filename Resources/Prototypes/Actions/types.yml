@@ -386,6 +386,17 @@
       event: !type:SpafEvolmEvent
 
 - type: entity
+  id: ActionSpafHeal
+  name: "[color=blue]Evolution[/color]"
+  description: Spend 10 meals to create a healing lump of mucus
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 15
+      icon: Stories/Actions/spaf.rsi/spaf_heal.png
+      event: !type:SpafHealEvent
+
+- type: entity
   id: ActionSpafDevour
   name: "[color=lime]Devourment[/color]"
   description: Devour your prey to get 50 food and restore your health
