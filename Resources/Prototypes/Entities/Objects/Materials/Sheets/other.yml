@@ -105,8 +105,18 @@
         reagents:
         - ReagentId: Plasma
           Quantity: 10
+      food:
+        reagents:
+        - ReagentId: Plasma
+          Quantity: 5
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: FlavorProfile
+    flavors:
+      - plasmic
   - type: Tag
     tags:
+    - Plasma
     - Sheet
 
 - type: entity

@@ -1,0 +1,6 @@
+- type: soundCollection
+  id: FootstepFire
+  files:
+  - /Audio/Stories/Footsteps/Fire/firestep1.ogg
+  - /Audio/Stories/Footsteps/Fire/firestep2.ogg
+  - /Audio/Stories/Footsteps/Fire/firestep3.ogg

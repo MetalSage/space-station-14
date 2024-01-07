@@ -1,0 +1,4 @@
+- type: flavor
+  id: plasmic
+  flavorType: Base
+  description: flavor-base-plasmic

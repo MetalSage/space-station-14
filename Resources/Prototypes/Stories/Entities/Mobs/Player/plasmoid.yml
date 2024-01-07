@@ -1,0 +1,5 @@
+- type: entity
+  save: false
+  parent: BaseMobPlasmoidPerson
+  id: MobPlasmoidPerson
+  

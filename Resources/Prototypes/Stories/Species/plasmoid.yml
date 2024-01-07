@@ -1,0 +1,143 @@
+- type: species
+  id: PlasmoidPerson
+  name: species-name-plasmoid
+  roundStart: true
+  prototype: MobPlasmoidPerson
+  sprites: MobPlasmoidSprites
+  defaultSkinTone: "#C96CE4"
+  markingLimits: MobPlasmoidMarkingLimits
+  dollPrototype: MobPlasmoidPersonDummy
+  skinColoration: Hues
+  maleFirstNames: names_plasmoid_first
+  femaleFirstNames: names_plasmoid_first
+  maleLastNames: names_plasmoid_flamename
+  femaleLastNames: names_plasmoid_flamename
+  naming: TheFirstofLast
+
+- type: speciesBaseSprites
+  id: MobPlasmoidSprites
+  sprites:
+    Head: MobPlasmoidHead
+    Hair: MobPlasmoidMarkingFollowSkin
+    FacialHair: MobPlasmoidMarkingFollowSkin
+    Chest: MobPlasmoidTorso
+    Eyes: MobPlasmoidEyes
+    LArm: MobPlasmoidLArm
+    RArm: MobPlasmoidRArm
+    LHand: MobPlasmoidLHand
+    RHand: MobPlasmoidRHand
+    LLeg: MobPlasmoidLLeg
+    RLeg: MobPlasmoidRLeg
+    LFoot: MobPlasmoidLFoot
+    RFoot: MobPlasmoidRFoot
+    
+- type: markingPoints
+  id: MobPlasmoidMarkingLimits
+  points:
+    Hair:
+      points: 1
+      required: false
+    FacialHair:
+      points: 1
+      required: false
+    Legs:
+      points: 2
+      required: false
+    Arms:
+      points: 2
+      required: false
+
+- type: humanoidBaseSprite
+  id: MobPlasmoidEyes
+  baseSprite:
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: eyes
+    
+- type: humanoidBaseSprite
+  id: MobPlasmoidMarkingFollowSkin
+  markingsMatchSkin: true
+  layerAlpha: 0.5
+
+- type: humanoidBaseSprite
+  id: MobPlasmoidHead
+  baseSprite:
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobPlasmoidHeadMale
+  baseSprite:
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobPlasmoidHeadFemale
+  baseSprite:
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: head
+  
+- type: humanoidBaseSprite
+  id: MobPlasmoidTorso
+  baseSprite:
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobPlasmoidTorsoMale
+  baseSprite:
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: torso
+    
+- type: humanoidBaseSprite
+  id: MobPlasmoidTorsoFemale
+  baseSprite:
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: torso
+    
+- type: humanoidBaseSprite
+  id: MobPlasmoidLArm
+  baseSprite:
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: l_arm
+    
+- type: humanoidBaseSprite
+  id: MobPlasmoidRArm
+  baseSprite:
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: r_arm
+    
+- type: humanoidBaseSprite
+  id: MobPlasmoidLHand
+  baseSprite:
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobPlasmoidRHand
+  baseSprite:
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: r_hand
+    
+- type: humanoidBaseSprite
+  id: MobPlasmoidLLeg
+  baseSprite:
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: l_leg
+    
+- type: humanoidBaseSprite
+  id: MobPlasmoidRLeg
+  baseSprite:
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: r_leg
+    
+- type: humanoidBaseSprite
+  id: MobPlasmoidLFoot
+  baseSprite:
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: l_foot
+    
+- type: humanoidBaseSprite
+  id: MobPlasmoidRFoot
+  baseSprite:
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: r_foot

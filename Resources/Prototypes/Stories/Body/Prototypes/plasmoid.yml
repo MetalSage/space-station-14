@@ -1,0 +1,43 @@
+- type: body
+  id: Plasmoid
+  name: "plasmoid"
+  root: torso
+  slots:
+    head:
+      part: HeadPlasmoid
+      connections:
+      - torso
+    torso:
+      part: TorsoPlasmoid
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      organs:
+        lungs: PlasmoidGasFlame
+        core: PlasmoidFlame
+    right arm:
+      part: RightArmPlasmoid
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmPlasmoid
+      connections:
+      - left hand
+    right hand:
+      part: RightHandPlasmoid
+    left hand:
+      part: LeftHandPlasmoid
+    right leg:
+      part: RightLegPlasmoid
+      connections:
+      - right foot
+    left leg:
+      part: LeftLegPlasmoid
+      connections:
+      - left foot
+    right foot:
+      part: RightFootPlasmoid
+    left foot:
+      part: LeftFootPlasmoid

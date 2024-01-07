@@ -41,6 +41,7 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepSlip
+        volume
   - type: Construction
     graph: BananaClownShoes
     node: shoes

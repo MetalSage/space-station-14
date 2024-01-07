@@ -244,6 +244,11 @@ public sealed class DrinkSystem : EntitySystem
         if (_openable.IsClosed(item, user))
             return true;
 
+        if (HasComp<NoDrinkComponent>(target))
+        {
+            _popup.PopupEntity(Loc.GetString("drink-component-try-use-drink-cannot-drink-other", ("entity", item)), item, user);
+            return false;
+        }
         if (!_solutionContainer.TryGetSolution(item, drink.Solution, out _, out var drinkSolution) || drinkSolution.Volume <= 0)
         {
             if (drink.IgnoreEmpty)

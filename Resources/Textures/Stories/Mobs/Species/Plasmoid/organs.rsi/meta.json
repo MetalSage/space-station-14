@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "BombasterDS",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "plasmoid_fire",
+	  "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+		  0.1
+        ]
+	  ]
+    },
+	{
+      "name": "plasmoid_lungs",
+	  "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+		  0.1
+        ]
+	  ]
+    }
+  ]
+}

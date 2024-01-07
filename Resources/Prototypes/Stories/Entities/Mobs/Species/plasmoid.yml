@@ -1,0 +1,138 @@
+- type: entity
+  name: Urist McPlasma
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobPlasmoidPerson
+  abstract: true
+  components:
+  - type: Hunger
+    starvationDamage:
+      types:
+        Cellular: 0.2
+    baseDecayRate: 0.05
+  - type: Flammable
+    fireSpread: true
+    canResistFire: true
+    damage: 
+      types:
+        Heat: 0.2
+  - type: Temperature
+    heatDamageThreshold: 483.15
+    coldDamageThreshold: 283.15
+    currentTemperature: 340.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 0.1
+    heatDamage:
+      types:
+        Heat: 0.4 
+  - type: Barotrauma
+    damage:
+      types:
+        Slash: 0.4
+  - type: PassiveDamage 
+    allowedStates:
+    - Alive
+    damageCap: 80
+    damage:
+      types:
+        Heat: -0.1
+        Cold: -0.1
+        Shock: -0.1
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Stutter
+    - Electrocution
+    - ForcedSleep
+    - TemporaryBlindness
+    - SlurredSpeech
+    - RatvarianLanguage
+    - PressureImmunity
+    - Muted
+    - Pacified
+    - StaminaModifier
+  - type: Blindable
+  - type: PlasmoidAccent
+  - type: NoDrink
+  - type: Butcherable
+    butcheringType: Spike 
+    spawned:
+      - id: SheetPlasma1
+        amount: 5
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 1.0
+    damageRecovery:
+      types:
+        Asphyxiation: -0.5
+  - type: FireVisuals
+    alternateState: Standing
+  - type: Icon
+    sprite: Stories/Mobs/Species/Plasmoid/parts.rsi
+    state: full
+  - type: Body
+    prototype: Plasmoid
+    requiredLegs: 2
+  - type: HumanoidAppearance
+    species: PlasmoidPerson
+  - type: Bloodstream
+    bloodReagent: Oxygen
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#C07ADE"
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepFire
+      params:
+        volume: 0.7
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Plasmoid
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Water, SpaceCleaner ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPieReaction
+    - reagents: [ Water ]
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaled: true
+        damage:
+          types:
+            Cellular: 1
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "slime-hurt-by-water-popup" ]
+        probability: 0.25
+  - type: MeleeWeapon
+    damage:
+      types:
+        Heat: 6
+    animation: WeaponArcPunch
+    soundHit:
+      path: /Audio/Weapons/eblademiss.ogg
+  - type: PointLight
+    energy: 3
+    radius: 4
+    color: "#E4B1FA"
+    enabled: true
+    
+- type: entity
+  parent: MobHumanDummy
+  id: MobPlasmoidPersonDummy
+  noSpawn: true
+  components:
+    - type: HumanoidAppearance
+      species: PlasmoidPerson

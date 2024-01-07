@@ -1,0 +1,118 @@
+- type: entity
+  id: BasePlasmoidOrgan
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Organ
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: Sprite
+    sprite: Stories/Mobs/Species/Plasmoid/organs.rsi
+  - type: StaticPrice
+    price: 55
+  - type: SolutionContainerManager
+    solutions:
+      organ:
+        reagents:
+        - ReagentId: Oxygen
+          Quantity: 5
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Plasma
+          Quantity: 1
+        - ReagentId: Carbon
+          Quantity: 5
+        - ReagentId: Dexalin
+          Quantity: 4
+  - type: Extractable
+    grindableSolutionName: food
+  - type: FlavorProfile
+    flavors:
+      - plasmic
+  - type: Tag
+    tags:
+      - Plasma #Плазмиды смогут есть органы других плазмидов 
+      
+- type: entity
+  id: PlasmoidFlame
+  parent: BasePlasmoidOrgan
+  name: plasmoid flame
+  description: "Low temperatue flame. It's very nice to touch"
+  components:
+  - type: Sprite
+    state: plasmoid_fire
+  - type: Stomach
+    specialDigestible:
+      tags:
+      - Meat
+      - Pill
+      - Plasma
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 80.0
+      food:
+        maxVol: 10.0
+        reagents:
+        - ReagentId: Plasma
+          Quantity: 1
+        - ReagentId: Carbon
+          Quantity: 5
+        - ReagentId: Dexalin
+          Quantity: 4
+  - type: Metabolizer
+    maxReagents: 10
+    metabolizerTypes: [ Plasmoid ]
+    removeEmpty: true
+    groups:
+    - id: Food
+      rateModifier: 2.5
+    - id: Drink
+      rateModifier: 2.5
+    - id: Medicine
+      rateModifier: 2.5
+    - id: Poison
+      rateModifier: 5.0
+    - id: Narcotic
+      rateModifier: 5.0
+    - id: Alcohol
+      rateModifier: 5.0
+      
+- type: entity
+  id: PlasmoidGasFlame
+  parent: BasePlasmoidOrgan
+  name: plasmoid gas chamber
+  description: "Chamber with circulating gas plasma"
+  components:
+  - type: Sprite
+    state: plasmoid_lungs
+  - type: Lung
+  - type: Metabolizer
+    removeEmpty: true
+    solutionOnBody: false
+    solution: "Lung"
+    metabolizerTypes: [ Plasmoid ]
+    groups:
+    - id: Gas
+      rateModifier: 100.0
+  - type: SolutionContainerManager
+    solutions:
+      organ:
+        maxVol: 10
+        reagents:
+        - ReagentId: Oxygen
+          Quantity: 5
+      Lung: 
+        maxVol: 100.0
+        canReact: false
+      food:
+        maxVol: 10.0
+        reagents:
+        - ReagentId: Plasma
+          Quantity: 1
+        - ReagentId: Carbon
+          Quantity: 5
+        - ReagentId: Dexalin
+          Quantity: 4
+      

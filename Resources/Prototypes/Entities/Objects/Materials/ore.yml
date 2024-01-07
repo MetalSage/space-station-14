@@ -92,6 +92,20 @@
   - type: Sprite
     state: plasma
   - type: Material
+  - type: FlavorProfile
+    flavors:
+      - plasmic
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Plasma
+          Quantity: 5
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: Tag
+    tags:
+      - Plasma
   - type: PhysicalComposition
     materialComposition:
       Plasma: 500

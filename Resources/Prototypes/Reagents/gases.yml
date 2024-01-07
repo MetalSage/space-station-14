@@ -35,7 +35,20 @@
         ratios:
           CarbonDioxide: 1.0
           Oxygen: -1.0
-
+      # PLASMOID
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Plasmoid
+      - !type:ModifyLungGas
+        conditions:
+        - !type:OrganType
+          type: Plasmoid
+        ratios:
+          WaterVapor: 1.0
+          Oxygen: -1.0
+          
+          
 - type: reagent
   id: Plasma
   name: reagent-name-plasma
@@ -53,21 +66,60 @@
     Poison:
       effects:
       - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Plasmoid
+          shouldHave: false
         damage:
           types:
             Poison: 3
       - !type:AdjustReagent
         reagent: Inaprovaline
         amount: -2.0
+      - !type:SatiateHunger
+        conditions:
+        - !type:OrganType
+          type: Plasmoid
     Gas:
       effects:
+      ## PLASMOID
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Plasmoid
+      - !type:ModifyLungGas
+        conditions:
+        - !type:OrganType
+          type: Plasmoid
+        ratios:
+          WaterVapor: 1.0
+          Plasma: -1.0
       - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Plasmoid
+        damage:
+          types:
+            Cellular: -1
+      - !type:AdjustReagent
+        reagent: Inaprovaline
+        amount: -2.0
+      - !type:SatiateHunger
+        conditions:
+        - !type:OrganType
+          type: Plasmoid
+        factor: 0.02
+      ## NOPLASMOID
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Plasmoid
+          shouldHave: false
         scaleByQuantity: true
         ignoreResistances: true
         damage:
           types:
-            Poison:
-              1
+            Poison: 1
       # Cant be added until I add metabolism effects on reagent removal
       #- !type:AdjustAlert
       #  alertType: Toxins
