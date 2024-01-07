@@ -5,7 +5,7 @@
   minPlayers: 35
   stations:
     Gemini:
-      stationProto: StandardNanotrasenStation
+      stationProto: StoriesStandardNanotrasenStation
       components:
         - type: StationNameSetup
           mapNameTemplate: '{0} Gemini {1}'

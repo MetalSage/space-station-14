@@ -63,6 +63,29 @@
     color: "#43ccb5"
   - type: Rotatable
     rotateWhileAnchored: true
+  #Stories start
+  - type: FTLAccessConsole
+    FTLKeySlotA:
+      whitelist:
+        tags:
+          - FTLKey
+      locked: true
+      swap: false
+      ejectOnDeconstruct: true
+      ejectOnBreak: true
+    FTLKeySlotB:
+      whitelist:
+        tags:
+          - FTLKey
+      locked: true
+      swap: false
+      ejectOnDeconstruct: true
+      ejectOnBreak: true
+  - type: AccessReader
+    access:
+    - [ Command ]
+  - type: ConsoleLock
+  #Stories end
 
 - type: entity
   parent: BaseComputerShuttle

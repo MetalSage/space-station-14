@@ -5,7 +5,7 @@
   minPlayers: 40
   stations:
     Avrit:
-      stationProto: StandardNanotrasenStation
+      stationProto: StoriesStandardNanotrasenStation
       components:
         - type: StationNameSetup
           mapNameTemplate: '{0} Avrite {1}'

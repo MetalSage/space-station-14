@@ -20,6 +20,10 @@ using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 
+
+using Content.Server.Stories.Systems;
+using Content.Server.Shuttles.Components;
+
 namespace Content.Server.GameTicking
 {
     public sealed partial class GameTicker
@@ -137,6 +141,11 @@ namespace Content.Server.GameTicking
 
                 LoadGameMap(map, toLoad, null);
             }
+
+            // Stories FTL WhiteList
+            var ftl = EnsureComp<FTLDestinationComponent>(_mapManager.GetMapEntityId(DefaultMap));
+            ftl.Whitelist = DestinationWL.CreateList("FTLDestinationAccessStation");
+            // Stories end
         }
 
 
@@ -164,6 +173,13 @@ namespace Content.Server.GameTicking
 
             var gridUids = gridIds.ToList();
             RaiseLocalEvent(new PostGameMapLoad(map, targetMapId, gridUids, stationName));
+
+            //Stories FTL WL
+            foreach (var uid in gridUids)
+            {
+                RemComp<FTLDestinationComponent>(uid);
+            }
+            //Stories end
 
             return gridUids;
         }

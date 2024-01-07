@@ -232,7 +232,8 @@ public sealed partial class EmergencyShuttleSystem
                 if (Deleted(comp.Entity))
                     continue;
 
-                _shuttle.AddFTLDestination(comp.Entity.Value, true);
+                // Stories FTL Keys WhiteList
+                //_shuttle.AddFTLDestination(comp.Entity.Value, true);
             }
         }
     }

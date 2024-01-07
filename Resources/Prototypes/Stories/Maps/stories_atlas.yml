@@ -6,7 +6,7 @@
   maxPlayers: 35
   stations:
     Atlas:
-      stationProto: StandardNanotrasenStation
+      stationProto: StoriesStandardNanotrasenStation
       components:
         - type: StationNameSetup
           mapNameTemplate: '{0} Atlas {1}'

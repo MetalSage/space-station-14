@@ -6,7 +6,7 @@
   maxPlayers: 5
   stations:
     Reach:
-      stationProto: StandardNanotrasenStation
+      stationProto: StoriesStandardNanotrasenStation
       components:
         - type: StationNameSetup
           mapNameTemplate: '{0} Reach Transport {1}'

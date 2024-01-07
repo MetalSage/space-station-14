@@ -6,7 +6,7 @@
   maxPlayers: 60
   stations:
     Barratry:
-      stationProto: StandardNanotrasenStation
+      stationProto: StoriesStandardNanotrasenStation
       components:
         - type: StationNameSetup
           mapNameTemplate: '{0} Barratry {1}'

@@ -1,0 +1,40 @@
+- type: entity
+  parent: ComputerShuttle
+  id: ComputerShuttleFTLKeyStation
+  suffix: БС Ключ "Станция"
+  components:
+  - type: FTLAccessConsole
+    KeyA: FTLKeyStation
+
+- type: entity
+  parent: ComputerShuttle
+  id: ComputerShuttleFTLKeyPrison
+  suffix: БС Ключ "Тюрьма"
+  components:
+  - type: FTLAccessConsole
+    KeyA: FTLKeyStation
+    KeyB: FTLKeyPrison
+
+- type: entity
+  parent: ComputerShuttle
+  id: ComputerShuttleFTLKeyGolden
+  suffix: БС Ключ "Общий"
+  components:
+  - type: FTLAccessConsole
+    KeyA: FTLKeyGolden
+
+- type: entity
+  parent: ComputerShuttle
+  id: ComputerShuttleFTLKeyCentcomm
+  suffix: БС Ключ "Центкомм"
+  components:
+  - type: FTLAccessConsole
+    KeyA: FTLKeyCentcomm
+
+- type: entity
+  parent: ComputerShuttle
+  id: ComputerShuttleFTLKeysCargo
+  suffix: БС Ключ "Карго"
+  components:
+  - type: FTLAccessConsole
+    KeyB: FTLKeyCargo

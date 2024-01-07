@@ -18,6 +18,7 @@ using Robust.Shared.Utility;
 using Content.Shared.Coordinates;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
+using Content.Server.Stories.Systems; // Stories
 
 namespace Content.Server.Cargo.Systems;
 
@@ -419,13 +420,10 @@ public sealed partial class CargoSystem
         CargoMap = _mapManager.CreateMap();
         var mapUid = _mapManager.GetMapEntityId(CargoMap.Value);
         var ftl = EnsureComp<FTLDestinationComponent>(_mapManager.GetMapEntityId(CargoMap.Value));
-        ftl.Whitelist = new EntityWhitelist()
-        {
-            Components = new[]
-            {
-                _factory.GetComponentName(typeof(CargoShuttleComponent))
-            }
-        };
+
+        // Stories FTL Keys WhiteList
+        ftl.Whitelist = DestinationWL.CreateList("FTLDestinationAccessCargo");
+        // Stories end
 
         _metaSystem.SetEntityName(mapUid, $"Trading post {_random.Next(1000):000}");
 

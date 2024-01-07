@@ -31,7 +31,7 @@ entities:
       type: Transform
     - whitelist:
         tags:
-        - Syndicate
+        - FTLDestinationAccessNukeops
       type: FTLDestination
     - chunks:
         -1,-1:

@@ -33,6 +33,8 @@ using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using TimedDespawnComponent = Robust.Shared.Spawners.TimedDespawnComponent;
 
+using Content.Server.Stories.Systems;
+
 namespace Content.Server.Shuttles.Systems;
 
 /// <summary>
@@ -494,6 +496,11 @@ public sealed class ArrivalsSystem : EntitySystem
             EnsureComp<ArrivalsSourceComponent>(id);
             EnsureComp<ProtectedGridComponent>(id);
             EnsureComp<PreventPilotComponent>(id);
+
+            // Stories FTL White List
+            var ftl = EnsureComp<FTLDestinationComponent>(id);
+            ftl.Whitelist = DestinationWL.CreateList("FTLDestinationAccessCross");
+            // Stories end
         }
 
         // Setup planet arrivals if relevant

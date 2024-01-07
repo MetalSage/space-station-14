@@ -1,0 +1,44 @@
+
+# FTL Destination Tags
+- type: Tag
+  id: FTLDestinationAccessStation
+
+- type: Tag
+  id: FTLDestinationAccessCross
+
+- type: Tag
+  id: FTLDestinationAccessPrison
+
+- type: Tag
+  id: FTLDestinationAccessCargo
+
+- type: Tag
+  id: FTLDestinationAccessNukeops
+
+- type: Tag
+  id: FTLDestinationAccessCentcomm
+
+- type: Tag
+  id: FTLDestinationAccessA
+
+- type: Tag
+  id: FTLDestinationAccessB
+
+- type: Tag
+  id: FTLDestinationAccessC
+
+- type: Tag
+  id: FTLDestinationAccessD
+
+- type: Tag
+  id: FTLDestinationAccessE
+
+- type: Tag
+  id: FTLKey
+
+# Tag for docking
+- type: Tag
+  id: ArrivalDockOfCross
+
+- type: Tag
+  id: EmergencyDockOfCross

@@ -32,6 +32,9 @@ using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
+//Stories
+using Content.Server.Stories.Systems;
+
 namespace Content.Server.Shuttles.Systems;
 
 public sealed partial class EmergencyShuttleSystem : EntitySystem
@@ -440,7 +443,12 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
 
         component.MapEntity = map;
         component.Entity = grid;
-        _shuttle.AddFTLDestination(grid.Value, false);
+
+        // Stories FTL Keys WhiteList
+        //_shuttle.AddFTLDestination(grid.Value, false);
+        var ftl = EnsureComp<FTLDestinationComponent>((EntityUid) grid);
+        ftl.Whitelist = DestinationWL.CreateList("FTLDestinationAccessCentcomm");
+        // Stories end
     }
 
     public HashSet<EntityUid> GetCentcommMaps()

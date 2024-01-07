@@ -6,7 +6,7 @@
   maxPlayers: 35
   stations:
     Omega:
-      stationProto: StandardNanotrasenStation
+      stationProto: StoriesStandardNanotrasenStation
       components:
         - type: StationNameSetup
           mapNameTemplate: '{0} Omega Station {1}'

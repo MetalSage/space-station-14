@@ -6,7 +6,7 @@
   maxPlayers: 70
   stations:
     Marathon:
-      stationProto: StandardNanotrasenStation
+      stationProto: StoriesStandardNanotrasenStation
       components:
         - type: StationNameSetup
           mapNameTemplate: '{0} Marathon Station {1}'

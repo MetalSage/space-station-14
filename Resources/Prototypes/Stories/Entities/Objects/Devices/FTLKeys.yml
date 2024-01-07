@@ -1,0 +1,132 @@
+- type: entity
+  id: BaseFTLKey
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - FTLKey
+
+
+- type: entity
+  parent: BaseFTLKey
+  id: FTLKeyStation
+  name: FTL Key "Station"
+  components:
+  - type: Sprite
+    sprite: Stories/Objects/Devices/FTLKeys.rsi
+    layers:
+    - state: station
+  - type: FTLKey
+    access:
+    - FTLDestinationAccessStation
+
+- type: entity
+  parent: BaseFTLKey
+  id: FTLKeyCross
+  name: FTL Key "Cross"
+  components:
+  - type: Sprite
+    sprite: Stories/Objects/Devices/FTLKeys.rsi
+    layers:
+    - state: station
+  - type: FTLKey
+    access:
+    - FTLDestinationAccessStation
+    - FTLDestinationAccessCross
+
+- type: entity
+  parent: BaseFTLKey
+  id: FTLKeyPrison
+  name: FTL Key "Prison"
+  components:
+  - type: Sprite
+    sprite: Stories/Objects/Devices/FTLKeys.rsi
+    layers:
+    - state: spaceprison
+  - type: FTLKey
+    access:
+    - FTLDestinationAccessPrison
+
+- type: entity
+  parent: BaseFTLKey
+  id: FTLKeyCentcomm
+  name: FTL Key "Centcomm"
+  components:
+  - type: Sprite
+    sprite: Stories/Objects/Devices/FTLKeys.rsi
+    layers:
+    - state: centcomm
+  - type: FTLKey
+    access:
+    - FTLDestinationAccessCentcomm
+
+- type: entity
+  parent: BaseFTLKey
+  id: FTLKeyCargo
+  name: FTL Key "Cargo post"
+  components:
+  - type: Sprite
+    sprite: Stories/Objects/Devices/FTLKeys.rsi
+    layers:
+    - state: cargo
+  - type: FTLKey
+    access:
+    - FTLDestinationAccessCargo
+
+- type: entity
+  parent: BaseFTLKey
+  id: FTLKeyNukeOps
+  name: Bloody red FTL Key
+  components:
+  - type: Sprite
+    sprite: Stories/Objects/Devices/FTLKeys.rsi
+    layers:
+    - state: syndicate
+  - type: FTLKey
+    access:
+    - FTLDestinationAccessNukeops
+    - FTLDestinationAccessStation
+
+- type: entity
+  parent: BaseFTLKey
+  id: FTLKeyGolden
+  name: FTL Key "Golden"
+  components:
+  - type: Sprite
+    sprite: Stories/Objects/Devices/FTLKeys.rsi
+    layers:
+    - state: golden
+  - type: FTLKey
+    access:
+    - FTLDestinationAccessStation
+    - FTLDestinationAccessPrison
+    - FTLDestinationAccessCargo
+    - FTLDestinationAccessCentcomm
+    - FTLDestinationAccessCross
+
+- type: entity
+  parent: BaseFTLKey
+  id: FTLKeyBroken
+  name: Broken FTL Key
+  components:
+  - type: Sprite
+    sprite: Stories/Objects/Devices/FTLKeys.rsi
+    layers:
+    - state: broken
+  - type: FTLKey
+    access:
+    - FTLDestinationAccessA
+
+- type: entity
+  parent: BaseFTLKey
+  id: FTLKeyOrange
+  name: Orange FTL Key
+  components:
+  - type: Sprite
+    sprite: Stories/Objects/Devices/FTLKeys.rsi
+    layers:
+    - state: orange
+  - type: FTLKey
+    access:
+    - FTLDestinationAccessB

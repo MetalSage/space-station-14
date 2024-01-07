@@ -5,7 +5,7 @@
   minPlayers: 50
   stations:
     Meta:
-      stationProto: StandardNanotrasenStation
+      stationProto: StoriesStandardNanotrasenStation
       components:
         - type: StationNameSetup
           mapNameTemplate: '{0} Meta Station {1}'

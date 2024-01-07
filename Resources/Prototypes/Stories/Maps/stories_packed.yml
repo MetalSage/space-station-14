@@ -6,7 +6,7 @@
   maxPlayers: 40
   stations:
     Packed:
-      stationProto: StandardNanotrasenStation
+      stationProto: StoriesStandardNanotrasenStation
       components:
         - type: StationNameSetup
           mapNameTemplate: '{0} Packed {1}'

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by Wooby, Discord Id:863844665538510888",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "station"
+    },
+    {
+      "name": "syndicate"
+    },
+    {
+      "name": "cargo"
+    },
+    {
+      "name": "golden"
+    },
+    {
+      "name": "spaceprison"
+    },
+    {
+      "name": "centcomm"
+    },
+    {
+      "name": "broken"
+    },
+    {
+      "name": "orange"
+    }
+  ]
+}
