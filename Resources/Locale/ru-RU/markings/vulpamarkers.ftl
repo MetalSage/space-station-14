@@ -1,0 +1,11 @@
+marking-VulpaTailSmooth = Хвост дубинкой
+marking-VulpaTailTip = Кончик хвоста дубинкой
+marking-VulpaTailBlush = Кончик хвоста кисточкой
+marking-VulpaHairApollo = Аполлон
+marking-VulpaHairBands = Озорника
+marking-VulpaHairBelle = Красотка
+marking-VulpaHairBun = Пучок
+marking-VulpaHairRaine = Крейг Рейн
+marking-VulpaSnoutMuzzle = Волчья мордочка
+marking-VulpaSnoutSharp = Вытянутая
+marking-VulpaChestBelly = Пузико

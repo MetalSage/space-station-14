@@ -1,0 +1,69 @@
+- type: entity
+  save: false
+  name: Urisst' McVulpa
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobVulpa
+  abstract: true
+  components:
+  - type: HumanoidAppearance
+    species: Vulpa
+  - type: Hunger
+  - type: Thirst
+  - type: Icon
+    sprite: Stories/Mobs/Species/Vulpa/parts.rsi
+    state: full
+  - type: Body
+    prototype: Vulpa
+    requiredLegs: 2
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatLizard
+      amount: 5
+  - type: Vocal
+    sounds:
+      Male: FemaleHuman
+      Female: FemaleHuman
+      Unsexed: FemaleHuman
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Scale
+  - type: WeakEyes
+  - type: MeleeWeapon
+    hidden: true
+    soundHit:
+      path: /Audio/Weapons/pierce.ogg
+    angle: 30
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Piercing: 5
+  - type: Temperature
+    heatDamageThreshold: 400
+    coldDamageThreshold: 285
+    currentTemperature: 310.15
+    specificHeat: 46
+    coldDamage:
+      types:
+        Cold : 0.2 #per second, scales with temperature & other constants
+    heatDamage:
+      types:
+        Heat : 0.1 #per second, scales with temperature & other constants
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.7
+    baseSprintSpeed : 4.5
+  - type: Perishable
+  - type: VulpaAccent
+
+- type: entity
+  save: false
+  name: Urist McVulpa
+  parent: BaseSpeciesDummy
+  id: MobVulpaDummy
+  noSpawn: true
+  description: A dummy vulpa meant to be used in character setup.
+  components:
+  - type: HumanoidAppearance
+    species: Vulpa
+
+#Weh
