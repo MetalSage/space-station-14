@@ -1,0 +1,16 @@
+- type: entity
+  parent: ClothingHandsGlovesCaptain
+  id: ClothingHandsGlovesCSCC
+  name: chief of staff CentComm gloves
+  description: Regal green gloves, with a nice gold trim. Swanky.
+  components:
+  - type: Sprite
+    sprite: Stories/Clothing/Hands/Gloves/cscc.rsi
+  - type: Clothing
+    sprite: Stories/Clothing/Hands/Gloves/cscc.rsi
+  - type: GloveHeatResistance
+    heatResistance: 1400
+  - type: Insulated
+  - type: Fiber
+    fiberColor: fibers-regal-green
+  - type: FingerprintMask

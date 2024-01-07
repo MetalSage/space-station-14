@@ -44,3 +44,25 @@
     sprite: Stories/Clothing/Uniforms/Jumpsuit/hosp.rsi
   - type: Clothing
     sprite: Stories/Clothing/Uniforms/Jumpsuit/hosp.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitOSO
+  name: officer of special operations jumpsuit
+  description: A jumpsuit made of strong material, providing robust protection.
+  components:
+  - type: Sprite
+    sprite: Stories/Clothing/Uniforms/Jumpsuit/oso.rsi
+  - type: Clothing
+    sprite: Stories/Clothing/Uniforms/Jumpsuit/oso.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCSCC
+  name: uniform of the Chief of Staff of the central command
+  description: A jumpsuit made of strong material, providing robust protection.
+  components:
+  - type: Sprite
+    sprite: Stories/Clothing/Uniforms/Jumpsuit/cscc.rsi
+  - type: Clothing
+    sprite: Stories/Clothing/Uniforms/Jumpsuit/cscc.rsi

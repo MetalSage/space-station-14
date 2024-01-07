@@ -33,3 +33,23 @@
       sprite: Stories/Clothing/Shoes/Boots/jackboots_sp.rsi
     - type: Clothing
       sprite: Stories/Clothing/Shoes/Boots/jackboots_sp.rsi
+
+- type: entity
+  parent: ClothingShoesBootsJack
+  id: ClothingShoesBootsJackOSO
+  name:  officer of special operations boots
+  components:
+    - type: Sprite
+      sprite: Stories/Clothing/Shoes/Boots/oso.rsi
+    - type: Clothing
+      sprite: Stories/Clothing/Shoes/Boots/oso.rsi
+
+- type: entity
+  parent: ClothingShoesBootsJack
+  id: ClothingShoesBootsCSCC
+  name: Chief of Staff CentComm boots
+  components:
+    - type: Sprite
+      sprite: Stories/Clothing/Shoes/Boots/cscc.rsi
+    - type: Clothing
+      sprite: Stories/Clothing/Shoes/Boots/cscc.rsi

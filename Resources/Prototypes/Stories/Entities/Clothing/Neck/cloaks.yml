@@ -6,3 +6,21 @@
   components:
   - type: Sprite
     sprite: Stories/Clothing/Neck/Cloaks/hosp.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakOSO
+  name: officer of special operations cloak
+  description: An exquisite gray cloak fitting for those who can assert dominance over wrongdoers. Take a stab at being civil in prosecution!
+  components:
+  - type: Sprite
+    sprite: Stories/Clothing/Neck/Cloaks/oso.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakCSCC
+  name: chief of staff CentComm cloak
+  description: An exquisite green and gold cloak, suitable for those who know how to dominate everything that moves
+  components:
+  - type: Sprite
+    sprite: Stories/Clothing/Neck/Cloaks/cscc.rsi

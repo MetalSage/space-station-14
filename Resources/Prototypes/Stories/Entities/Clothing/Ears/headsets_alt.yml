@@ -30,3 +30,14 @@
     sprite: Stories/Clothing/Ears/Headsets/prison.rsi
   - type: Clothing
     sprite: Stories/Clothing/Ears/Headsets/prison.rsi
+
+- type: entity
+  parent: ClothingHeadsetAltCentCom
+  id: ClothingHeadsetOSO
+  name: officer of special operations headset
+  description: A headset used by the upper echelons of Nanotrasen.
+  components:
+  - type: Sprite
+    sprite: Stories/Clothing/Ears/Headsets/oso.rsi
+  - type: Clothing
+    sprite: Stories/Clothing/Ears/Headsets/oso.rsi
