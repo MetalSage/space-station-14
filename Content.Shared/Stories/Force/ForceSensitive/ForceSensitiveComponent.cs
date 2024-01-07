@@ -4,7 +4,7 @@ using Content.Shared.Actions;
 [RegisterComponent]
 public sealed partial class ForceSensitiveComponent : Component
 {
-    [Dependency] private IEntityManager _entityManager;
+    [Dependency] private readonly IEntityManager _entityManager = default!;
 
     /// <summary>
     /// Световой меч чувствительного к силе.
